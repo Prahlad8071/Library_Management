@@ -13,6 +13,10 @@ const app = express();
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+    res.send('Welcome to the Library Management System API! Access /books to see the book endpoints.');
+});
+
 app.use('/books', bookRoutes);
 
 // Error Handling Middleware
